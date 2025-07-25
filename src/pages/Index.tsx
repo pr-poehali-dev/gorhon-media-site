@@ -253,7 +253,7 @@ const Index = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-black/10 backdrop-blur-sm"></div>
 
       {/* Logo */}
       <div className="absolute top-8 left-8 z-20 animate-fade-in">
