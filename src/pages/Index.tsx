@@ -19,32 +19,63 @@ const Index = () => {
           <div className="space-y-16">
             {/* Hero Section */}
             <div className="relative text-center py-20 animate-fade-in">
-              <div className="absolute inset-0 bg-gradient-to-r from-gorkhon-blue/20 to-gorkhon-pink/20 rounded-3xl animate-pulse-cosmic"></div>
+              {/* Creative People Elements */}
+              <div className="absolute inset-0 overflow-hidden">
+                <div 
+                  className="absolute top-10 right-20 w-32 h-32 opacity-20 animate-float"
+                  style={{
+                    backgroundImage: `url('/img/76d9df4f-67a4-4a90-b0a9-449e01cde0dc.jpg')`,
+                    backgroundSize: 'contain',
+                    backgroundRepeat: 'no-repeat',
+                    filter: 'brightness(0) invert(1)'
+                  }}
+                ></div>
+                <div 
+                  className="absolute bottom-10 left-20 w-40 h-40 opacity-15 animate-pulse-cosmic"
+                  style={{
+                    backgroundImage: `url('/img/cf73d5ca-42f5-4199-9a8b-a42c309e90e1.jpg')`,
+                    backgroundSize: 'contain',
+                    backgroundRepeat: 'no-repeat',
+                    filter: 'brightness(0) invert(1)'
+                  }}
+                ></div>
+                <div 
+                  className="absolute top-1/2 left-10 w-24 h-24 opacity-10 animate-float"
+                  style={{
+                    backgroundImage: `url('/img/76d9df4f-67a4-4a90-b0a9-449e01cde0dc.jpg')`,
+                    backgroundSize: 'contain',
+                    backgroundRepeat: 'no-repeat',
+                    filter: 'brightness(0) invert(1)',
+                    animationDelay: '1s'
+                  }}
+                ></div>
+              </div>
+              
               <div className="relative z-10">
-                <h1 className="text-6xl font-bold text-white mb-6 animate-float">
+                <h1 className="text-7xl font-unbounded font-black text-white mb-8 animate-float tracking-wider">
                   МЕДИА КОМАНДА
-                  <span className="block bg-gradient-to-r from-gorkhon-blue to-gorkhon-pink bg-clip-text text-transparent">
+                  <span className="block text-8xl bg-gradient-to-r from-gorkhon-blue to-gorkhon-pink bg-clip-text text-transparent mt-4">
                     ГОРХОН
                   </span>
                 </h1>
-                <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-xl font-unbounded font-light text-white/90 max-w-3xl mx-auto leading-relaxed">
                   Мы создаем визуальные истории поселка Горхон через фотографию, веб-технологии и медиа-проекты. 
                   Наша миссия — сохранить память и создать цифровое будущее нашего родного места.
                 </p>
-                <div className="mt-8 flex justify-center gap-4">
+                <div className="mt-12 flex justify-center gap-6">
                   <Button 
-                    className="bg-gorkhon-blue hover:bg-gorkhon-blue/80 text-white px-8 py-6 text-lg animate-pulse-cosmic"
+                    className="bg-gorkhon-blue hover:bg-gorkhon-blue/80 text-white px-10 py-8 text-xl font-unbounded font-bold animate-pulse-cosmic rounded-2xl shadow-2xl shadow-gorkhon-blue/30"
                     onClick={() => setActiveSection('projects')}
                   >
-                    <Icon name="Play" className="mr-2" />
+                    <Icon name="Play" className="mr-3" size={28} />
                     Наши проекты
                   </Button>
                   <Button 
                     variant="outline" 
-                    className="border-gorkhon-pink text-gorkhon-pink hover:bg-gorkhon-pink hover:text-white px-8 py-6 text-lg"
+                    className="border-2 border-gorkhon-pink text-gorkhon-pink hover:bg-gorkhon-pink hover:text-white px-10 py-8 text-xl font-unbounded font-bold rounded-2xl backdrop-blur-sm bg-white/10"
                     onClick={() => setActiveSection('about')}
                   >
-                    <Icon name="Users" className="mr-2" />
+                    <Icon name="Users" className="mr-3" size={28} />
                     Узнать больше
                   </Button>
                 </div>
@@ -53,49 +84,49 @@ const Index = () => {
 
             {/* Features Cards */}
             <div className="grid md:grid-cols-3 gap-8 animate-fade-in">
-              <Card className="bg-white/10 backdrop-blur-md border-gorkhon-blue/30 hover:border-gorkhon-blue/60 transition-all duration-300 hover:scale-105">
-                <CardContent className="p-8 text-center">
-                  <Icon name="Camera" size={48} className="text-gorkhon-blue mx-auto mb-4 animate-float" />
-                  <h3 className="text-2xl font-bold text-white mb-3">Фотопроекты</h3>
-                  <p className="text-white/70">Сохраняем школьные воспоминания и моменты жизни поселка</p>
+              <Card className="bg-white/20 backdrop-blur-lg border-gorkhon-blue/50 hover:border-gorkhon-blue transition-all duration-300 hover:scale-105 shadow-xl">
+                <CardContent className="p-10 text-center">
+                  <Icon name="Camera" size={56} className="text-gorkhon-blue mx-auto mb-6 animate-float" />
+                  <h3 className="text-3xl font-unbounded font-bold text-white mb-4">Фотопроекты</h3>
+                  <p className="text-white/80 font-unbounded font-light text-lg leading-relaxed">Сохраняем школьные воспоминания и моменты жизни поселка</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/10 backdrop-blur-md border-gorkhon-pink/30 hover:border-gorkhon-pink/60 transition-all duration-300 hover:scale-105">
-                <CardContent className="p-8 text-center">
-                  <Icon name="Globe" size={48} className="text-gorkhon-pink mx-auto mb-4 animate-float" />
-                  <h3 className="text-2xl font-bold text-white mb-3">Веб-разработка</h3>
-                  <p className="text-white/70">Создаем интерактивные 360° туры и веб-приложения</p>
+              <Card className="bg-white/20 backdrop-blur-lg border-gorkhon-pink/50 hover:border-gorkhon-pink transition-all duration-300 hover:scale-105 shadow-xl">
+                <CardContent className="p-10 text-center">
+                  <Icon name="Globe" size={56} className="text-gorkhon-pink mx-auto mb-6 animate-float" />
+                  <h3 className="text-3xl font-unbounded font-bold text-white mb-4">Веб-разработка</h3>
+                  <p className="text-white/80 font-unbounded font-light text-lg leading-relaxed">Создаем интерактивные 360° туры и веб-приложения</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/10 backdrop-blur-md border-white/30 hover:border-white/60 transition-all duration-300 hover:scale-105">
-                <CardContent className="p-8 text-center">
-                  <Icon name="Sparkles" size={48} className="text-white mx-auto mb-4 animate-float" />
-                  <h3 className="text-2xl font-bold text-white mb-3">Медиа-контент</h3>
-                  <p className="text-white/70">Профессиональная съемка и создание визуального контента</p>
+              <Card className="bg-white/20 backdrop-blur-lg border-white/50 hover:border-white transition-all duration-300 hover:scale-105 shadow-xl">
+                <CardContent className="p-10 text-center">
+                  <Icon name="Sparkles" size={56} className="text-white mx-auto mb-6 animate-float" />
+                  <h3 className="text-3xl font-unbounded font-bold text-white mb-4">Медиа-контент</h3>
+                  <p className="text-white/80 font-unbounded font-light text-lg leading-relaxed">Профессиональная съемка и создание визуального контента</p>
                 </CardContent>
               </Card>
             </div>
 
             {/* Stats Section */}
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-12 animate-fade-in">
-              <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div className="bg-white/25 backdrop-blur-lg rounded-3xl p-16 animate-fade-in shadow-2xl border border-white/30">
+              <div className="grid md:grid-cols-4 gap-12 text-center">
                 <div className="animate-pulse-cosmic">
-                  <div className="text-4xl font-bold text-gorkhon-blue mb-2">50+</div>
-                  <div className="text-white/70">Проектов</div>
+                  <div className="text-6xl font-unbounded font-black text-gorkhon-blue mb-4">50+</div>
+                  <div className="text-white font-unbounded font-medium text-lg">Проектов</div>
                 </div>
                 <div className="animate-pulse-cosmic">
-                  <div className="text-4xl font-bold text-gorkhon-pink mb-2">1000+</div>
-                  <div className="text-white/70">Фотографий</div>
+                  <div className="text-6xl font-unbounded font-black text-gorkhon-pink mb-4">1000+</div>
+                  <div className="text-white font-unbounded font-medium text-lg">Фотографий</div>
                 </div>
                 <div className="animate-pulse-cosmic">
-                  <div className="text-4xl font-bold text-white mb-2">5</div>
-                  <div className="text-white/70">Участников</div>
+                  <div className="text-6xl font-unbounded font-black text-white mb-4">5</div>
+                  <div className="text-white font-unbounded font-medium text-lg">Участников</div>
                 </div>
                 <div className="animate-pulse-cosmic">
-                  <div className="text-4xl font-bold text-gorkhon-blue mb-2">2024</div>
-                  <div className="text-white/70">Год основания</div>
+                  <div className="text-6xl font-unbounded font-black text-gorkhon-blue mb-4">2024</div>
+                  <div className="text-white font-unbounded font-medium text-lg">Год основания</div>
                 </div>
               </div>
             </div>
@@ -252,8 +283,7 @@ const Index = () => {
         backgroundAttachment: 'fixed'
       }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/10 backdrop-blur-sm"></div>
+
 
       {/* Logo */}
       <div className="absolute top-8 left-8 z-20 animate-fade-in">
