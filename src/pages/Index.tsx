@@ -244,7 +244,7 @@ const Index = () => {
 
   return (
     <div 
-      className="min-h-screen flex"
+      className="min-h-screen"
       style={{
         backgroundImage: `url('https://cdn.poehali.dev/files/8b33ff74-1435-413c-bf8b-1288386c7f5b.png')`,
         backgroundSize: 'cover',
@@ -255,56 +255,40 @@ const Index = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
 
-      {/* Sidebar */}
-      <div className="relative z-10 w-80 bg-black/60 backdrop-blur-md border-r border-white/20 flex flex-col animate-slide-in-left">
-        {/* Logo */}
-        <div className="p-8 text-center border-b border-white/20">
-          <img 
-            src="https://cdn.poehali.dev/files/9f822a76-1fb6-4f65-a7a4-04014aa486cf.png" 
-            alt="Логотип Горхон" 
-            className="w-32 h-auto mx-auto mb-4 animate-float"
-          />
-          <h1 className="text-2xl font-bold text-white">ГОРХОН</h1>
-          <p className="text-sm text-white/70 mt-2">Медиа команда</p>
-        </div>
+      {/* Logo */}
+      <div className="absolute top-8 left-8 z-20 animate-fade-in">
+        <img 
+          src="https://cdn.poehali.dev/files/9f822a76-1fb6-4f65-a7a4-04014aa486cf.png" 
+          alt="Логотип Горхон" 
+          className="w-16 h-auto animate-float"
+        />
+      </div>
 
-        {/* Navigation */}
-        <nav className="flex-1 p-6">
-          <ul className="space-y-3">
+      {/* Floating Menu Capsule */}
+      <div className="fixed left-8 top-1/2 -translate-y-1/2 z-20 animate-slide-in-left">
+        <nav className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full p-4 shadow-lg">
+          <ul className="flex flex-col gap-4">
             {menuItems.map((item) => (
               <li key={item.id}>
                 <button
                   onClick={() => setActiveSection(item.id)}
-                  className={`w-full flex items-center gap-4 p-4 rounded-xl transition-all duration-300 hover:scale-105 ${
+                  className={`p-4 rounded-full transition-all duration-300 hover:scale-110 ${
                     activeSection === item.id
-                      ? 'bg-gorkhon-blue text-white shadow-lg shadow-gorkhon-blue/25'
-                      : 'text-white/70 hover:text-white hover:bg-white/10'
+                      ? 'bg-white/20 shadow-lg'
+                      : 'hover:bg-white/10'
                   }`}
                 >
-                  <Icon name={item.icon} size={24} />
-                  <span className="font-medium">{item.label}</span>
+                  <Icon name={item.icon} size={24} className="text-white" />
                 </button>
               </li>
             ))}
           </ul>
         </nav>
-
-        {/* Footer */}
-        <div className="p-6 border-t border-white/20">
-          <div className="text-center text-white/50 text-sm">
-            <p>© 2024 Медиа команда Горхон</p>
-            <div className="flex justify-center gap-4 mt-4">
-              <Icon name="Mail" size={20} className="hover:text-gorkhon-blue cursor-pointer transition-colors" />
-              <Icon name="Phone" size={20} className="hover:text-gorkhon-pink cursor-pointer transition-colors" />
-              <Icon name="MapPin" size={20} className="hover:text-white cursor-pointer transition-colors" />
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Main Content */}
       <div className="relative z-10 flex-1 overflow-y-auto">
-        <div className="p-12">
+        <div className="pl-32 pr-12 py-12">
           {renderContent()}
         </div>
       </div>
