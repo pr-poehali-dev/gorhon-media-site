@@ -160,7 +160,7 @@ const Index = () => {
               <div className="max-w-4xl mx-auto">
                 <Icon name="Quote" size={64} className="text-gorkhon-pink mx-auto mb-8 animate-float" />
                 <blockquote className="text-3xl font-unbounded font-light text-white mb-8 leading-relaxed min-h-[120px]">
-                  <TypewriterText text=""Наша команда создана для того, чтобы показать красоту и уникальность поселка Горхон через современные медиа-технологии. Мы верим, что каждый момент достоин быть запечатленным и сохраненным для будущих поколений."" speed={30} />
+                  <TypewriterText text="«Наша команда создана для того, чтобы показать красоту и уникальность поселка Горхон через современные медиа-технологии. Мы верим, что каждый момент достоин быть запечатленным и сохраненным для будущих поколений.»" speed={30} />
                 </blockquote>
                 <cite className="text-xl text-gorkhon-blue font-unbounded font-semibold">
                   — Руководитель команды "Горхон"
