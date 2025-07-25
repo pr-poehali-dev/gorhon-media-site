@@ -246,7 +246,7 @@ const Index = () => {
     <div 
       className="min-h-screen flex"
       style={{
-        backgroundImage: `url('https://cdn.poehali.dev/files/19f8bf13-f0aa-4651-a3e8-3668b6873538.png')`,
+        backgroundImage: `url('https://cdn.poehali.dev/files/8b33ff74-1435-413c-bf8b-1288386c7f5b.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
